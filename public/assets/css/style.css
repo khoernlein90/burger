@@ -1,0 +1,63 @@
+.formCard {
+    width: 400px;
+
+}
+.mainCard {
+	border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+.card-block {
+    padding: 25px;
+}
+
+.jumboForm {
+    margin-top: 35px;
+}
+
+.card-header {
+    color: white;
+}
+
+li {
+    margin: 5px;
+}
+
+.form-group {
+    padding: 10px;
+}
+
+.btn-success {
+    margin-top: 10px;
+}
+
+h5 {
+    margin-top: -10px;
+}
+
+.inner-addon {
+    position: relative;
+}
+
+.inner-addon .fa-cutlery {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+}
+
+.left-addon .fa-cutlery {
+    left: 0px;
+}
+
+.right-addon .fa-cutlery {
+    right: 0px;
+}
+
+.left-addon input {
+    padding-left: 30px;
+}
+
+.right-addon input {
+    padding-right: 30px;
+}

@@ -1,0 +1,73 @@
+<div class="jumbotron text-center">
+    <h1 class="display-3">Eat Da Burger!</h1>
+    <p class="lead">This application is linked with a MySQL Database which allows you to add or remove burgers from the database.</p>
+    <hr class="m-y-md">
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card mainCard">
+                <div class="card-header bg-success text-center">
+                    <h2>Uneaten Burgers</h2>
+                </div>
+                <div class="card-block">
+                    <ol>
+                        {{#each burgers}}
+                            {{#unless devoured}}
+                                {{> burgers/burger-block devoured=true}}
+                            {{/unless}}
+                        {{/each}}
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mainCard">
+                <div class="card-header bg-success text-center">
+                    <h2>Devoured Burgers</h2>
+                </div>
+                <div class="card-block">
+                    <ol>
+                        {{#each burgers}}
+                            {{#if devoured}}
+                                {{> burgers/burger-block devoured=false}}
+                            {{/if}}
+                        {{/each}}
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="jumbotron jumboForm">
+    <div class="container">
+        {{!-- <div class="col"></div> --}}
+        <div class="card rounded-0 mainCard formCard">
+            <div class="card-header rounded-0 text-center bg-success formHeader">
+                <h2>Add a Burger</h2>
+            </div>
+            <div class="card-block">
+                <form class="create-form">
+                    <div class="form-group has-feedback">
+                        <h5><label for="burgName">Burger Name:</label></h5>
+                        <div class="inner-addon left-addon">
+                            <i class="fa fa-cutlery" aria-hidden="true"></i>
+                            <input type="text" class="form-control" id="burgName" name="name" />
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="form-group">
+                            <h6>
+                    <label for="food">Devour?</label>
+                    </h6>
+                            <input type="radio" name="devoured" value="1" checked> Yes, devour!
+                            <br>
+                            <input type="radio" name="devoured" value="0"> No, not yet.
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success">Add Burger</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
